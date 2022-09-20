@@ -1,0 +1,69 @@
+
+
+= Kicad project documentation
+
+
+== Directories
+
+=== Top directories
+
+----
+├── kicadlib   # My local libraries
+├── mainboard  # Project directory
+├── subcard    # Project directory
+├── pcbdemo    # Project directory
+├── scripts    # My scripts
+----
+I keep my projects under a common folder together with my local kicad libraries and scripts. These directories are all separate git repositories.
+
+=== Project directory
+
+----
+├── doc   # Where the documentation is *
+│   ├── html  # Generated html 
+│   ├── Makefile  # To assemble the documentation *
+│   ├── pcbdemo.adoc # The main documentation file, Asciidoc format *
+│   |── static # Images and pdf-files
+|   └── pcbdemo.pdf  # The generated pdf file
+├── pcb  *
+│   ├── doc   # for images and pdf-files manually generated from Pcbnew
+│   ├── Makefile # To maintain bom and position files *
+│   ├── pcbdemo_BOM.csv # Vendor and product number modifiers *
+│   ├── pcbdemo.kicad_pcb # The Pcbnew board file *
+│   ├── pcbdemo.kicad_pro # The Kicad project file *
+│   ├── pcbdemo.kicad_sch # The schematic file *
+│   ├── pcbdemo_ROT.csv   # Component rotation modifiers *
+│   └── prod # Produced gerber, position and bom files
+
+----
+Files marked by an asterix are files maintained in the git repository. The doc directory is for the documentation. The asciidoc file is the main file. The doc make target copies relevant files from ../pcb directories to the static directory and converts pdf schematic files to png images. The pdf make target produces the pcbdemo.pdf file. Make target html produce pcbdemo.html in the html directory and copies image and pdf files to html/static.
+
+The directories not marked with an asterix contain only produced files and may be deleted at any time.
+
+
+== Modification files
+
+The genboarddoc.py script reads component properties from the kicad_pcb file and produces the bom files. These component values are then updated with component value, vendor name and vendor SKU from the pcbdemo_BOM.csv file. For each run of the script this file is updated, using the modified values, to change if board components have been deleted or added. I find this method easier than adding and editing vendor and SKU number fields to each and every component of the schematics.
+
+The zero angle rotation of components is defined by IPC, but some assembly houses use their own definitions, perhaps based on how the components are placed inside the component tape. The Kicad footprint libraries have their definition of the zero angle used when placed on the board. The rotation can be changed to fit the assempler's definition by using the pcbdemo_ROT.csv file. There, for each component, the rotation angle for the assembler is defined. When generating the position file for use by the assembler, the angles from this file is used, neglecting whatever angles are given in the kicad_pcb file.    
+
+== BOM files
+
+The gendoc.py script generates three BOM-files top components (pcbdemo_bom_T.csv), bottom components (pcbdemo_bom_B) and all components together, here components are grouped based on footprint and value. Components where the exclude from BOM property is set will not be included.
+
+== Position file
+The position file contains component placement coordinates and rotation angle and is used by the assembly house. The rotation angles are as given in the `pcbdemo_ROT.csv` file. 
+
+The coordinates are relative to the origin set for the _component placement  and drill files_ in Pcbnew. To match the coordinates of the gerber files to the position files you must also tick the _Use drill/place file origin_ option of the gerber plot screen.  
+
+
+
+
+
+[small]
+[format="dsv",cols="6*1"]
+|===================================================
+
+include::static/pcbdemo_bom_G.csv[]
+|===================================================
+
