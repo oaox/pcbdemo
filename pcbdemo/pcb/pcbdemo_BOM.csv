@@ -1,0 +1,12 @@
+Ref, Value, Vendor, SKU
+C1,                100n,     elfa          ,      321         
+C2,                100n,               ,             
+C3,                470p/NP0,        digikey   ,       1234        
+J1,                USB_A,               ,               
+R1,                1k2,               ,               
+R2,                1k2,               ,               
+R3, 1k2, , 
+R4, 1k2, , 
+R5, 1k2, , 
+U1,                CH340N,               ,               
+U2,                TJA1040T/CM,               ,               
