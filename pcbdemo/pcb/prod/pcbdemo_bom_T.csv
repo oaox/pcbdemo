@@ -1,0 +1,12 @@
+Ref, Value, Footprint, Vendor, SKU
+C1,100n,C_0603_1608Metric,      company a          ,       321         
+C2,100n,C_0603_1608Metric,      company a          ,  321            
+C3,470p/NP0,C_0603_1608Metric,         vendor b   ,        1234        
+J1,USB_A,USBA-SHOUHAN-AM180,     nice guys           ,    54-316            
+R1,1k2,R_0603_1608Metric,       nosupport   ,           24A5     
+R2,1k2,R_0603_1608Metric,       nosupport         ,   24A5       
+R3,1k2,R_0603_1608Metric,    nosupport , 24A5
+R4,1k2,R_0603_1608Metric,    nosupport ,24A5
+R5,1k2,R_0603_1608Metric,    nosupport, 24A5
+U1,CH340N,SO-8_3.9x4.9mm_P1.27mm, thoseagain     , 561               
+U2,TJA1040T/CM,SOP-8_3.9x4.9mm_P1.27mm,   stockedtheysaid  , 777444333                 

@@ -1,12 +1,12 @@
 Ref, Value, Vendor, SKU
-C1,                100n,     elfa          ,      321         
-C2,                100n,               ,             
-C3,                470p/NP0,        digikey   ,       1234        
-J1,                USB_A,               ,               
-R1,                1k2,               ,               
-R2,                1k2,               ,               
-R3, 1k2, , 
-R4, 1k2, , 
-R5, 1k2, , 
-U1,                CH340N,               ,               
-U2,                TJA1040T/CM,               ,               
+C1,                  100n,       company a          ,        321         
+C2,                  100n,       company a          ,   321            
+C3,                  470p/NP0,          vendor b   ,         1234        
+J1,                  USB_A,      nice guys           ,     54-316            
+R1,                  1k2,        nosupport   ,            24A5     
+R2,                  1k2,        nosupport         ,    24A5       
+R3,   1k2,     nosupport ,  24A5
+R4,   1k2,     nosupport , 24A5
+R5,   1k2,     nosupport,  24A5
+U1,                  CH340N,  thoseagain     ,  561               
+U2,                  TJA1040T/CM,    stockedtheysaid  ,  777444333                 

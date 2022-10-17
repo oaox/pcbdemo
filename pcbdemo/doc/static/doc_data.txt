@@ -1,0 +1,18 @@
+InfoBegin
+InfoKey: Creator
+InfoValue: Eeschema-PDF
+InfoBegin
+InfoKey: CreationDate
+InfoValue: D:20221014213940
+InfoBegin
+InfoKey: Producer
+InfoValue: KiCad PDF
+InfoBegin
+InfoKey: Title
+InfoValue: pcbdemo.pdf
+NumberOfPages: 1
+PageMediaBegin
+PageMediaNumber: 1
+PageMediaRotation: 0
+PageMediaRect: 0 0 842 596
+PageMediaDimensions: 842 596

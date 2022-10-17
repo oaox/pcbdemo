@@ -1,0 +1,7 @@
+References:Value:Footprint:Quantity:Vendor:SKU
+C1, C2,:100n:C_0603_1608Metric:2:      company a          :       321         
+C3,:470p/NP0:C_0603_1608Metric:1:         vendor b   :        1234        
+J1,:USB_A:USBA-SHOUHAN-AM180:1:     nice guys           :    54-316            
+R1, R2, R3, R4, R5,:1k2:R_0603_1608Metric:5:       nosupport   :           24A5     
+U1,:CH340N:SO-8_3.9x4.9mm_P1.27mm:1: thoseagain     : 561               
+U2,:TJA1040T/CM:SOP-8_3.9x4.9mm_P1.27mm:1:   stockedtheysaid  : 777444333                 

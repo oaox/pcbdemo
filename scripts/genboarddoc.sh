@@ -9,6 +9,7 @@ thumbx=100
 # First copy files
 mkdir -p static
 cp ../pcb/doc/* static
+mv static/"$base".pdf static/"$base"_sch.pdf
 cp ../pcb/prod/*.csv static
 rm -f static/doc_data.txt
 
@@ -16,19 +17,10 @@ rm -f static/doc_data.txt
 mogrify -trim -fuzz 10% static/"$base"_brd*
 
 
-# make thumbs of images
-convert -resize $thumbx  static/"$base"_brd_top.png \
-	static/"$base"_brd_top_thumb.png 
-
-if [ -f static/"$base"_brd_bottom.png ]; then
-    convert -resize $thumbx static/"$base"_brd_bottom.png \
-	    static/"$base"_brd_bottom_thumb.png
-fi
-
 
 #then split schematics and make png-images
 
-pdftk static/"$base".pdf burst output static/"$base"_sch_%02d.pdf 
+pdftk static/"$base"_sch.pdf burst output static/"$base"_sch_%02d.pdf 
 
 pdfs=static/"$base"_sch_??.pdf
 for f in $pdfs
