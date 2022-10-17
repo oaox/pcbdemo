@@ -1,11 +1,17 @@
 # pcbdemo
-Demonstrates my way to structure Kicad projects, [see detailed description](github.com/oaox/pcbdemo/pcbdemo/doc/html/pcbdemo.html).
+Demonstrates my way to structure Kicad projects, see detailed description in doc/pcbdemo.pdf
+.
 Includes a few makefiles and scripts to help maintain the documentation
 of the designed PCBs.
 
 This project produces pdf and html files based on the kicad_pcb
 file in addition to bom and component position files.
 
-UUses Python, Asciidoc, a2x and asciidoctor.
+Uses Python, Asciidoc, Prince and asciidoctor.
+
+Prince (https://www.princexml.com/) converts html/css files to pdf and
+lets you produce pdfs formatted by the css. In this case I used the
+default formatting.
+
 
 
