@@ -4,7 +4,7 @@
 
 This document describes how I set up my Kicad projects to ease documentation and generation of PCB assembly files. Here I will use an example project, pcbdemo, a board which function you should not care about. It is just used as a base for documenting how I do things.
 
-The scripts and make file prerequisites are ImageMagick, pdftk, asciidoc, asciidoctor and a2x. These tools should be available for most Linux distributions.
+The scripts and make file prerequisites are ImageMagick, pdftk, asciidoc, asciidoctor and Prince. These tools should be available for most Linux distributions.
 
 == Directories
 
